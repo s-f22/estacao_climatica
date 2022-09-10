@@ -23,7 +23,7 @@ class App extends React.Component {
     const d3 = new Date(ano, 11, 22)
     const d4 = new Date(ano, 3, 21)
     const sul = latitude < 0;
-    if (data >= d1 && date < d2) {
+    if (data >= d1 && data < d2) {
       return sul ? 'Inverno' : 'Verão'
     }
     if (data >= d2 && data < d3) {
@@ -33,6 +33,13 @@ class App extends React.Component {
       return sul ? 'Verão' : 'Inverno'      
     }
     return sul ? 'Outono' : 'Primavera'
+  }
+
+  icones = {
+    'Primavera' : "fa-seedling",
+    'Verão': "fa-umbrella-beach",
+    'Outono': 'fa-tree',
+    "Inverno": 'fa-snowman'
   }
 
   render() {
