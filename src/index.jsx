@@ -12,12 +12,12 @@ class App extends React.Component {
       longitude: null,
       estacao: null,
       data: null,
-      icone: null,
+      icone: null
     }
   }
 
-  obterEstacao( data, latitude) => {
-    const ano => data.getFullYear();
+  obterEstacao = ( data, latitude) => {
+    const ano = data.getFullYear();
     const d1 = new Date(ano, 5, 21)
     const d2 = new Date(ano, 8, 24)
     const d3 = new Date(ano, 11, 22)
